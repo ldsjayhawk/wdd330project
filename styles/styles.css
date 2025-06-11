@@ -96,22 +96,22 @@ div {
 
 /*...HEADERS... */
 
-h1 {
-  color: #3b5b26;
-  /* border-bottom: #000 solid 2px; */
+/* h1 {
+  color: #5a8b39;
   font-family: var(--heading-font);
-  /* margin: 0 1rem; */
-  /* font-size: 1.4em; */
-}
+  padding: .5rem;
+} */
 
-h2{
+h1{
   margin: .5rem;
   background-color: #5a8b39;
   color: #fff;
   border-radius: 15px;
   text-align: center;
+  font-size: 1.5em;
+  padding: .25rem;
 }
-    
+
 h2,h3 {
   padding: .625rem;
 }
