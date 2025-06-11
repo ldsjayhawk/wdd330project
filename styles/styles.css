@@ -1,0 +1,320 @@
+:root {
+  --heading-font: Arial, sans-serif;
+  --paragraph-font: Figtree, sans-serif;
+}
+
+/*...NAVIGATION... */
+    
+#menu.open {
+  display: block;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  color: #fff;
+}
+
+#menu::before {
+  content: "☰"; 
+}
+
+#menu.open::before {
+  content: "❌";
+}
+
+/* 
+.toggle::before {
+	content: "☰";
+}
+
+.toggle.open::before {
+	content: "☰";
+} */
+
+.navigation {
+  list-style-type: none;
+  padding: 30px;
+  background-color: #000;
+  border: #fff 1px solid;
+  margin: 0 auto;
+}
+
+.navigation active {
+  width: 350px;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation.open li{
+  display: block;
+}
+
+.navigation a {
+  display: block;
+  color: #fff;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: left;
+}
+
+.navigation.open {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex: 1;
+}
+
+.navigation a:hover {
+  background-color: #3b5b26;
+  border: #fff solid 2px;
+  border-radius: 10px;
+  max-width: 100px;
+}
+
+/*...BODY... */
+
+body {
+  font-family: var(--paragraph-font);
+}
+
+div {
+  padding: 5px;
+}
+
+
+/*...MAIN IMAGE... */
+
+.hero img {
+  border: 1px solid #000;
+  padding: 5px;
+  box-shadow: 0 0 50px gray;
+  margin: .625rem 0 .625rem 1.5rem;
+  width: 80%;
+}
+
+/*...HEADERS... */
+
+h1 {
+  color: #3b5b26;
+  /* border-bottom: #000 solid 2px; */
+  font-family: var(--heading-font);
+  /* margin: 0 1rem; */
+  /* font-size: 1.4em; */
+}
+
+h2{
+  margin: .5rem;
+  background-color: #5a8b39;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+}
+    
+h2,h3 {
+  padding: .625rem;
+}
+
+
+/*...TEAMS... */
+
+.team-container {
+  padding: 0;
+}
+
+#cards {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  justify-content: space-evenly;
+  border-color: #fff; 
+  margin: 10px;
+  padding: 10px;
+}
+
+.team {   
+  border-left: solid 2px #000;
+  border-top: solid 2px #000;
+  color: #000;
+  font-weight: 700;
+  margin: 0 auto;
+  box-shadow: #999 10px 5px;
+  padding: 40px 10px 10px 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.team img {
+  margin: 0 auto;
+}
+
+
+/* ...SIGN UP PAGE...*/
+/* ---------------- */
+
+.signup fieldset {
+  margin: 1rem 0;
+  padding: .5rem .5rem 1rem .5rem;
+}
+  
+.signup legend {
+  background-color: #fff;
+  color: #3b5b26;
+  padding: 0 .5rem;
+}
+  
+.signup label {
+  display: block;
+  padding-top: 1rem;
+  font-size: .9rem;
+}
+  
+.signup input[type="text"],
+.signup select ,
+#fgm.teamChooser
+{
+  display: block;
+  border-radius: 6px;
+  padding: .75rem;
+  max-width: 25rem;
+  border-left: solid 2px #000;
+  border-top: solid 2px #000;
+  color: #000;
+  box-shadow: #999 10px 5px;
+  width: 100%;
+}
+  
+.signup input[type="radio"]
+{
+  margin: 6px;  
+}
+
+.signup input[type="submit"] {
+  padding: .75rem;
+  background-color: #5a8b39;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25em;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  max-width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 50px gray; 
+}
+  
+.signup input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+}
+
+.signup input:required, select:required {
+  border-left: solid 8px red;
+}
+
+.signup input:required:valid, select:required:valid {
+  border-left: solid 8px green;
+}
+
+.signup p{
+  text-align: center;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+/*...DRAFT PAGE... */
+/* --------------- */
+
+/*...BODY... */
+
+.grid {
+  display: grid;
+  gap: 5px;
+  align-items: center;
+  grid-template-columns: 1fr;
+  justify-content: space-evenly;
+}
+
+li{
+  list-style-type: none;
+  padding: 2px;
+}
+
+/*...TEAM LIST...*/
+.listContainer {
+  border: solid #000 2px;
+  min-height: 34rem;
+}
+
+button {
+  background-color: #eee;
+  color: #fff;
+  padding: .75rem;
+  width: 200px;
+  font-size: .9em;
+}
+
+/*...PLAYER LIST...*/
+
+button {
+  background-color: #5a8b39;
+  font-weight: 700;
+  color: #fff;
+  padding: .75rem;
+  width: 200px;
+  font-size: .9em;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+}
+
+#otc {
+  text-align: right;
+  border: 0;
+  margin: .5rem 1rem 0 0;
+}
+
+/* #fgm
+{
+  display: block;
+  border: solid 1px #999;
+  border-radius: 6px;
+  padding: .75rem;
+  max-width: 25rem;
+  margin: .25rem;
+} */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/*...FOOTER... */
+footer{
+  font-size: .8em;
+  background-color: #000;
+  color: #fff;
+  padding: .5rem;
+  text-align: center;
+}

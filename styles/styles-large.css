@@ -1,0 +1,49 @@
+/* medium - 2 columns */
+@media screen and (min-width: 550px) {
+	#playercard{
+        grid-template-columns: auto auto;
+    }
+
+}
+
+/* large - 3 columns */
+@media screen and (min-width: 700px) {
+
+	#menu {
+		display: none; 
+	}
+
+	.toggle {
+		display: none; 
+	}
+
+	.navigation {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+		justify-content: space-evenly;
+	}
+
+	.navigation li {
+		display: block;
+	}
+	
+	.navigation ul {
+		display: flex;
+		flex: 1 1 100%;
+	}
+
+	.hero img {
+		margin: .625rem 0 .625rem 7rem;
+	}
+
+	/*...DRAFT PAGE... */
+	/* --------------- */
+
+	/*...BODY... */
+
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}	
+
+
