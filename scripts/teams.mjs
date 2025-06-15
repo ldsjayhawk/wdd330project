@@ -1,9 +1,11 @@
-export function displayTeams (data) {
+export function displayTeams (teams) {
     const cards = document.querySelector("#cards")
+
+    if (!cards) return;
     cards.innerHTML = "";
-    data.forEach(team => {
+    teams.forEach(team => {
         let card = document.createElement("section");
-        let teamName = document.createElement('h3');
+        let teamName = document.createElement('h2');
         let teamLogo = document.createElement('img');
 
         teamName.textContent = `${team.teamCity} ${team.teamName}`;
@@ -16,8 +18,18 @@ export function displayTeams (data) {
         card.appendChild(teamLogo);
         card.appendChild(teamName); 
         
-        cards.appendChild(card);
-
+        
         card.classList.add('team');
-    });
+        
+        card.addEventListener("click", () => {
+            localStorage.setItem("ls-city", team.teamCity);
+            localStorage.setItem("ls-name", team.teamName);
+            localStorage.setItem("ls-logo", team.mlbLogo1);
+            localStorage.setItem("ls-id", team.teamID);
+            localStorage.setItem("ls-abv", team.teamAbv);
+            window.location.href = "roster.html";
+        });
+        
+        cards.appendChild(card); 
+    })
 }
