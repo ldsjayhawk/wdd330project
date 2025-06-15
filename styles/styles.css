@@ -102,7 +102,7 @@ div {
   padding: .5rem;
 } */
 
-h1{
+h1 {
   margin: .5rem;
   background-color: #5a8b39;
   color: #fff;
@@ -110,6 +110,10 @@ h1{
   text-align: center;
   font-size: 1.5em;
   padding: .25rem;
+}
+
+h1#team {
+    background-color: gray;
 }
 
 h2,h3 {
@@ -308,6 +312,104 @@ th, td {
 
 th {
   background-color: #f2f2f2;
+}
+
+/* Roster List Display */
+/* ------------------- */
+
+.player {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: lightgray;
+    border: solid 1px #bbb;
+    margin: 0 auto;
+    width: 80%;
+    align-items: center;
+}
+
+.player section p 
+{
+    flex: 1;
+    font-family: var(--paragraph-font);
+	  font-size: 1rem;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.player:nth-child(even) {
+	background-color: #fff;
+}
+
+/* ...SEARCH PAGE...*/
+/* ---------------- */
+
+.form#search {
+  display: flex;
+  align-items: center;
+}
+
+.search fieldset {
+  border: none;
+  padding: .5rem .5rem 1rem .5rem;
+}
+  
+.search legend {
+  background-color: #fff;
+  color: #3b5b26;
+  padding: 0 .5rem;
+}
+
+.search label {
+  display: block;
+  font-size: .75rem;
+  color: #000;
+}
+
+.search input[type="text"]
+{
+  display: block;
+  border-radius: 6px;
+  padding: .75rem;
+  border-left: solid 2px #000;
+  border-top: solid 2px #000;
+  box-sizing: border-box;
+  color: #000;
+  box-shadow: #999 10px 5px;
+  font-size: 1.25em;
+  font-weight: 700;
+  width: 50%;
+}
+
+.search input[type="submit"] 
+{
+  padding: .5rem;
+  background-color: #5a8b39;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  max-width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0 50px gray; 
+}
+
+.search input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+}
+
+.results#cards section {
+  border: solid 2px #000 
 }
 
 /*...FOOTER... */
