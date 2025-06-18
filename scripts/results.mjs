@@ -15,7 +15,7 @@ async function searchPlayer(playerName){
             'x-rapidapi-key': 'd62ff818fdmshf4feea5fde1723bp13ebe8jsn1893f39e23c2',
             'x-rapidapi-host': 'tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com'
         }
-    };
+    }; 
 
     try {
         const response = await fetch(url, options);
@@ -42,17 +42,13 @@ export function displayPlayerSearch(players) {
     }
 
     players.forEach(player => {
-        let playerCard = document.createElement("section");
-        let playerName = document.createElement('h2');
-        let playerNum = document.createElement('p')
-        let playerPosition = document.createElement('p')
-        let playerpic = document.createElement('img')
-        let statOne = document.createElement('p')
-        let statTwo = document.createElement('p')
-        let statThree = document.createElement('p')
-        let statFour = document.createElement('p')
+        const playerCard = document.createElement("section");
+        const playerName = document.createElement('h2');
+        const playerNum = document.createElement('p')
+        const playerPosition = document.createElement('p')
+        const playerpic = document.createElement('img')
 
-        playerNum.textContent = `# ${player.jerseyNum}`;
+        playerNum.textContent = `# ${player.jerseyNum ?? 'N/A'}`;
         playerName.textContent = `${player.longName}`;
         playerPosition.textContent = `Position: ${player.pos}`;
         playerpic.setAttribute('src', `${player.mlbHeadshot}`);
@@ -61,28 +57,41 @@ export function displayPlayerSearch(players) {
         playerpic.setAttribute('width', '100');
         playerpic.setAttribute('height', '100');
 
-        if (player.pos === "P") {
-
-            statOne.textContent = `Wins: ${player.stats.Pitching.Win}`;
-            statTwo.textContent = `ERA: ${player.stats.Pitching.ERA}`;
-            statThree.textContent = `K: ${player.stats.Pitching.SO}`;
-            statFour.textContent = `SV: ${player.stats.Pitching.Save}`;
-        } else {
-
-            statOne.textContent = `AVG: ${player.stats.Hitting.avg ?? 'N/A'}`;
-            statTwo.textContent = `HR: ${player.stats.Hitting.HR}`;
-            statThree.textContent = `RBI: ${player.stats.Hitting.RBI}`;
-            statFour.textContent = `SB: ${player.stats.BaseRunning.SB}`;
-        }
-
         playerCard.appendChild(playerName); 
         playerCard.appendChild(playerpic); 
         playerCard.appendChild(playerNum); 
         playerCard.appendChild(playerPosition);
-        playerCard.appendChild(statOne) 
-        playerCard.appendChild(statTwo) 
-        playerCard.appendChild(statThree) 
-        playerCard.appendChild(statFour)
+
+        if (player.pos === "P") {
+
+            let win = document.createElement('p')
+            let era = document.createElement('p')
+            let so = document.createElement('p')
+            let save = document.createElement('p')
+            win.textContent = `Wins: ${player.stats?.Pitching?.Win ?? 0}`;
+            era.textContent = `ERA: ${player.stats?.Pitching?.ERA ?? 'N/A'}`;
+            so.textContent = `K: ${player.stats?.Pitching?.SO ?? 0}`;
+            save.textContent = `SV: ${player.stats?.Pitching?.Save ?? 0}`;
+            playerCard.appendChild(win) 
+            playerCard.appendChild(era) 
+            playerCard.appendChild(so) 
+            playerCard.appendChild(save)
+
+        } else {
+
+            let avg = document.createElement('p')
+            let hr = document.createElement('p')
+            let rbi = document.createElement('p')
+            let sb = document.createElement('p')
+            avg.textContent = `AVG: ${player.stats?.Hitting?.avg ?? 'N/A'}`;
+            hr.textContent = `HR: ${player.stats?.Hitting?.HR ?? 0}`;
+            rbi.textContent = `RBI: ${player.stats?.Hitting?.RBI ?? 0}`;
+            sb.textContent = `SB: ${player.stats?.BaseRunning?.SB ?? 0}`;
+            playerCard.appendChild(avg) 
+            playerCard.appendChild(hr) 
+            playerCard.appendChild(rbi)
+            playerCard.appendChild(sb)
+        }
     
     // playerClassList.add('player');
     

@@ -53,19 +53,11 @@ export function displayRosters(players) {
             let playerName = document.createElement('p');
             let playerNum = document.createElement('p')
             let playerPosition = document.createElement('p')
-            // const playerid = player.playerID
 
             playerNum.textContent = `${player.jerseyNum}`;
             playerName.textContent = `${player.longName}`;
             playerPosition.textContent = `${player.pos}`;
 
-
-            // teamLogo.setAttribute('src', team.mlbLogo1);
-            // teamLogo.setAttribute('alt', `${team.teamName} logo`);
-            // teamLogo.setAttribute('loading', 'lazy');
-            // teamLogo.setAttribute('width', '100');
-            // teamLogo.setAttribute('height', '100');
-            
             rosterCard.appendChild(playerName); 
             rosterCard.appendChild(playerNum); 
             rosterCard.appendChild(playerPosition);
