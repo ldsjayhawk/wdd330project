@@ -12,7 +12,7 @@ export async function getRosterData() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
+        // console.log(result);
 
         if (result.body.roster) {
             localStorage.removeItem("ls-error")

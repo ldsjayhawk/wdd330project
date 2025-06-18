@@ -13,7 +13,7 @@ async function getTeamData() {
     const response = await fetch(url,options);
     if (response.ok) {
       const data = await response.json();
-      console.table(data);
+      // console.table(data);
       displayTeams(data.body);
     }};
 
