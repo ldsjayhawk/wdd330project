@@ -17,8 +17,8 @@
 #menu.open {
   display: block;
   font-size: 1.5rem;
-  position: fixed;
-  top: 150px;
+  position: absolute;
+  top: 200px;
   right: 20px;
   color: #fff;
   text-decoration: none;
