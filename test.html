@@ -12,24 +12,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
-
+    
     <!-- stylesheet links -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles-large.css">
 
     <!-- javascript links -->
-    <script type="module" src="scripts/search.mjs" defer></script>
     <script type="module" src="scripts//headerFooter.mjs" defer></script>
+
+
 </head>
 <body>
-
     <header id="header">
         <a id="menu" href="javascript:void(0)"></a>
         <div class="hero">
         <picture>
             <source media="(min-width: 700px)" srcset="images/fgmheader-large.webp">
             <img src="images/fgm-header.webp" alt="FGM Banner" width="400">
-        </picture>
+        </picture>     
       </div>
         <nav>
             <ul class="navigation">
@@ -41,21 +41,15 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
-    <h1>Player Search</h1>
-        <form method = "get" action = "results.html" class="search">
-            <fieldset>
-                <label>Enter Player Name<input type = "text" name = "playerSearch" id="playerSearch" required></label>
-            </fieldset>
-            <button class="baseball">
-                <p>Search</p>
-                <input type="image" value="Find Player" src="images/baseball.png" alt="baseball" width="60">
-            </button>
-
-        </form>
+        <h1>Test</h1>
+        <div>
+            <img src="images/spinner.svg" alt="Teams icon" width="50" id="spinner">
+        </div>
+        <p class="time">Hello World!</p>
     </main>
-
+    
     <footer>
         <p id="footer-info"></p>
     </footer>
