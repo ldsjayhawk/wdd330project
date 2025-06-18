@@ -37,6 +37,10 @@
 		margin: 0 auto;
 	}
 
+	.icons {
+		flex-direction: row;
+	}
+
 	/*...DRAFT PAGE... */
 	/* --------------- */
 

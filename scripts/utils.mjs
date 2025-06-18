@@ -1,3 +1,13 @@
+// responsive navigation
+const hamburger = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
+
+hamburger.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamburger.classList.toggle('open');
+});
+
+
 // footer info -- copyright and last updated
 export function getFooterInfo() {
     const currentyear = new Date().getFullYear();
