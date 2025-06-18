@@ -1,3 +1,8 @@
+function showPage() {
+    document.getElementById("spinner").style.display = "none";
+    document.getElementById("cards");
+}
+
 export function displayTeams (teams) {
     const cards = document.querySelector("#cards")
 
@@ -31,5 +36,6 @@ export function displayTeams (teams) {
         });
         
         cards.appendChild(card); 
+        showPage();
     })
 }

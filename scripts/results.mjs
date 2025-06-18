@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     searchPlayer(playerName);
 });
 
+function showPage() {
+    document.getElementById("spinner").style.display = "none";
+    document.getElementById("cards");
+}
 async function searchPlayer(playerName){
     const url = `https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBPlayerInfo?playerName=${playerName}&getStats=true&statsSeason=2025`;
     const options = {
@@ -83,5 +87,6 @@ export function displayPlayerSearch(players) {
     // playerClassList.add('player');
     
     cards.appendChild(playerCard); 
+    showPage();
 });
     }
